@@ -1,0 +1,13 @@
+.app .search-input {
+    width: 100%;
+    display: block;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    box-sizing: border-box;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

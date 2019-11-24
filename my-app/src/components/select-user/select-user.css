@@ -1,0 +1,59 @@
+.WrapSelectUser {
+    /*width: 38%;*/
+    max-width: 300px;
+    height: 560px;
+    border: 1px solid #ccc;
+    margin: 0 50px 0 0;
+    padding: 10px;
+    position: sticky;
+    top: 20px;
+}
+
+.WrapSelectUser .user .img_user {
+    width: 250px;
+}
+
+.WrapSelectUser .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.WrapSelectUser .description_user {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.WrapSelectUser .description_user .age_user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.WrapSelectUser .description_user .fav_animal_user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.WrapSelectUser .description_user .phone_user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.WrapSelectUser .description_user .border {
+    border-top: 1px solid #ccc;
+}
+
+.WrapSelectUser .description_user .border p {
+    margin: 10px 0 10px 0;
+}
+
+.favorite_phrase {
+    width: 90%;
+}
+
+.favorite_phrase p{
+   text-align: center;
+}

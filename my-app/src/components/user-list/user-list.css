@@ -1,0 +1,90 @@
+.wrapUserList {
+    width: 80%;
+    border: 1px solid #ccc;
+    margin: 0 0 5px 0;
+}
+
+.wrapUserList .name-category {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 7px;
+}
+
+.wrapUserList .name-category .blockLeft {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapUserList .name-category .blockLeft .imgListUser {
+    width: 35%;
+}
+
+.wrapUserList .name-category .blockLeft .nameListUser {
+    width: 65%;
+}
+
+.wrapUserList .name-category .blockRight {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapUserList .name-category .blockRight .ageListUser {
+    width: 35%;
+}
+
+.wrapUserList .name-category .blockRight .phoneListUser {
+    width: 65%;
+}
+
+.all-list-user .list-user-item .blockLeft .imgListUser {
+    width: 35%;
+}
+
+.all-list-user .list-user-item .blockLeft .imgListUser img {
+    width: 70px;
+}
+
+.all-list-user .list-user-item .blockLeft .nameListUser {
+    width: 65%;
+}
+
+.all-list-user .list-user-item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    border-top: 1px solid rgba(204, 204, 204, .7);
+}
+
+.all-list-user .list-user-item:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.all-list-user .list-user-item:hover {
+    background-color: #eee;
+}
+
+.all-list-user .list-user-item .blockLeft {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-list-user .list-user-item .blockRight {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-list-user .list-user-item .blockRight .ageListUser {
+    width: 35%;
+}
+
+.all-list-user .list-user-item .blockRight .phoneListUser {
+    width: 65%;
+}
