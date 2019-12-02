@@ -1,27 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const UserListItem = ({img, nameListUser, ageListUser, phoneListUser}) => {
 
-    return (
-                <div>
-                    <div className="blockLeft">
-                        <div className="imgListUser">
-                            <img src={img} alt="" />
-                        </div>
-                        <div className="nameListUser">
-                            <p>{nameListUser}</p>
-                        </div>
+export default class UserListItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
+    render() {
+        const {img, nameListUser, ageListUser, phoneListUser} = this.props;
+        return (
+            <div>
+                <div className="blockLeft">
+                    <div className="imgListUser">
+                        <img src={img} alt=""/>
                     </div>
-                    <div className="blockRight">
-                        <div className="ageListUser">
-                            <p>{ageListUser}</p>
-                        </div>
-                        <div className="phoneListUser">
-                            <p>{phoneListUser}</p>
-                        </div>
+                    <div className="nameListUser">
+                        <p>{nameListUser}</p>
                     </div>
                 </div>
-    )
-};
-
-export default UserListItem;
+                <div className="blockRight">
+                    <div className="ageListUser">
+                        <p>{ageListUser}</p>
+                    </div>
+                    <div className="phoneListUser">
+                        <p>{phoneListUser}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
