@@ -24,18 +24,42 @@ export default class App extends Component {
                 {img: '../img/lion.svg', nameListUser: 'Luis Jacobs', ageListUser: '45', phoneListUser: '8 (547) 653-9041', id: '12'},
                 {img: '../img/penguin.svg', nameListUser: 'Phillip Daniels', ageListUser: '65', phoneListUser: '8 (629) 653-9041', id: '13'},
                 {img: '../img/cat.svg', nameListUser: 'Hettie Soto', ageListUser: '67', phoneListUser: '8 (123) 653-9041', id: '14'}
-            ]
+            ],
+            term: ''
+        };
+
+        this.onUpdateSearch = this.onUpdateSearch.bind(this);
+    }
+
+    searchPost(items, term) {
+
+        if (term.length === 0) {
+            return items
         }
+
+        return items.filter((item) => {
+           return item.nameListUser.indexOf(term) > -1
+        });
+
+    }
+
+    onUpdateSearch(term) {
+        this.setState({term})
     }
 
     render() {
+        const {data, term} = this.state;
+
+        const visiblePosts = this.searchPost(data, term);
+
         return (
             <div className="app">
-                <SearchPanel/>
+                <SearchPanel
+                    onUpdateSearch={this.onUpdateSearch}/>
                 <ControlPanel/>
                 <div className="main-content">
                     <SelectUser/>
-                    <UserList lists={this.state.data} />
+                    <UserList lists={visiblePosts} />
                 </div>
             </div>
         )
