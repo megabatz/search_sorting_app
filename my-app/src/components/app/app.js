@@ -119,13 +119,11 @@ export default class App extends Component {
 
         if (term.length === 0) {
             return items
-        } else {
-            console.log('Nothing found :(');
         }
 
         return items.filter((item) => {
             return (
-                item.nameListUser.indexOf(term) > -1 ||
+                item.nameListUser.toLowerCase().indexOf(term.toLowerCase()) > -1 ||
                 item.ageListUser.indexOf(term) > -1  ||
                 item.phoneListUser.indexOf(term) > -1
 
@@ -133,6 +131,7 @@ export default class App extends Component {
         })
 
     }
+
 
     onUpdateSearch(term) {
         this.setState({term})
