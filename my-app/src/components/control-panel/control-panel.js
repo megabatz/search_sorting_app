@@ -15,6 +15,7 @@ export default class ControlPanel extends Component {
     }
 
     reset() {
+        console.log(1212)
     }
 
     render() {
