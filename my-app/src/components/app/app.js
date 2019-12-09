@@ -132,6 +132,9 @@ export default class App extends Component {
 
     }
 
+    reset() {
+       console.log('reset')
+    }
 
     onUpdateSearch(term) {
         this.setState({term})
