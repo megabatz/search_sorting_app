@@ -113,6 +113,7 @@ export default class App extends Component {
         };
 
         this.onUpdateSearch = this.onUpdateSearch.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
     searchPost(items, term) {
