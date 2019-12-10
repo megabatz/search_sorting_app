@@ -113,19 +113,22 @@ export default class App extends Component {
         };
 
         this.onUpdateSearch = this.onUpdateSearch.bind(this);
+        this.sortByName = this.sortByName.bind(this);
+        this.sortByAge = this.sortByAge.bind(this);
         this.reset = this.reset.bind(this);
     }
 
     searchPost(items, term) {
 
         if (term.length === 0) {
-            return items
+            return items;
+
         }
 
         return items.filter((item) => {
             return (
                 item.nameListUser.toLowerCase().indexOf(term.toLowerCase()) > -1 ||
-                item.ageListUser.indexOf(term) > -1  ||
+                item.ageListUser.indexOf(term) > -1 ||
                 item.phoneListUser.indexOf(term) > -1
 
             )
@@ -133,12 +136,26 @@ export default class App extends Component {
 
     }
 
+    sortByName() {
+        console.log('sortByName')
+    }
+
+    sortByAge() {
+        const ByAgeData = this.state.data;
+        const ageData = ByAgeData.map((item) => {
+            console.log(item);
+
+            return item
+        });
+    }
+
     reset() {
-       console.log('reset')
+        console.log('reset')
     }
 
     onUpdateSearch(term) {
         this.setState({term})
+
     }
 
     render() {
@@ -150,7 +167,10 @@ export default class App extends Component {
             <div className="app">
                 <SearchPanel
                     onUpdateSearch={this.onUpdateSearch}/>
-                <ControlPanel/>
+                <ControlPanel
+                    reset={this.reset}
+                    sortByAge={this.sortByAge}
+                    sortByName={this.sortByName}/>
                 <div className="main-content">
                     <SelectUser/>
                     <UserList lists={visiblePosts}/>
