@@ -143,10 +143,12 @@ export default class App extends Component {
     sortByAge() {
         const ByAgeData = this.state.data;
         const ageData = ByAgeData.map((item) => {
-            console.log(item);
-
-            return item
+            console.log(item.ageListUser);
+            return (
+                item.ageListUser
+            )
         });
+
     }
 
     reset() {
