@@ -7,25 +7,39 @@ export default class ControlPanel extends Component {
         this.state = {
             term: ''
         };
-        // this.sorted = {nameListUser: true, ageListUser: true};
+
+        this.sortByName = this.sortByName.bind(this);
+        this.sortByAge = this.sortByAge.bind(this);
         this.reset = this.reset.bind(this);
     }
 
-    sort(type) {
+    sortByName(e) {
+        const term = e.target;
+        this.setState({term: term});
+        this.props.sortByName(term);
+
     }
 
-    reset() {
-        console.log(1212)
+    sortByAge(e) {
+        const term = e.target;
+        this.setState({term: term});
+        this.props.sortByAge(term);
+    }
+
+    reset(e) {
+        const term = e.target;
+        this.setState({term: term});
+        this.props.reset(term);
     }
 
     render() {
         return (
             <div className="groupBtn">
-                <button className="sortByName" onClick={console.log('sortByName')}>
+                <button className="sortByName" onClick={this.sortByName}>
               <span><img src="../img/sort-name.png" alt=""/>
               </span> Sort by name
                 </button>
-                <button className="sortByAge" onClick={console.log('sortByAge')}>
+                <button className="sortByAge" onClick={this.sortByAge}>
               <span><img src="../img/sort-age.svg" alt=""/>
               </span> Sort by age
                 </button>
