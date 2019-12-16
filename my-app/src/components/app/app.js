@@ -9,7 +9,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [
+            data: [ // 1. create file constants.js and move to them this data
                 {
                     img: '../img/owl.svg',
                     nameListUser: 'Chad Snyder',
